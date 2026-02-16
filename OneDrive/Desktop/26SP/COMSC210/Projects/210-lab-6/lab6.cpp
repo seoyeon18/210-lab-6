@@ -18,6 +18,7 @@ int main()
 
     delete[] arr;
 
+
     return 0;
 }
 
@@ -29,6 +30,8 @@ void enterArrayData(double* arr, int size)
         cout << "Element" << i << ": ";
         cin >> *(arr + i);
     }
+
+    cout << "Data entry complete";
 }
 
 void outputArrayData(double* arr, int size)
@@ -36,13 +39,19 @@ void outputArrayData(double* arr, int size)
     cout << "Output array elements: ";
     for (int i = 0 ; i < size; i++)
     {
-        cout << *(arr + i) << " ";
+        cout << *(arr + i) ;
     }
     cout << endl;
+
     
 }
 
 double sumArray(double* arr, int size)
 {
-   
+    double sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        sum += *(arr + i);
+    }
+    return sum;
 }
